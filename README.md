@@ -1,4 +1,4 @@
-En estos apuntes hay muchos ejemplos de c≤digo, ya que me ayuda ver c≤digo ya hecho para entender como funciona.
+En estos apuntes hay muchos ejemplos de código, ya que me ayuda ver código ya hecho para entender como funciona.
 
 
 ### Ejemplo de SQL normal
@@ -12,7 +12,7 @@ ORDER BY population desc
 
 Para mayor o menor, hay que usar primero "<=", no permite hacer "=<". Igualmente, tiene que ser ">=" y no "=>". El igual al final siempre.
 
-Siempre hay que a±adir punto y coma al final.
+Siempre hay que añadir punto y coma al final.
 
 ```
 SELECT name, population, area
@@ -24,14 +24,14 @@ Para seleccionar varias columnas se debe separarlas por comas.
 LIMIT 3
 ```
 
-Ense±a solo las tres primeras filas de la tabla.
+Enseña solo las tres primeras filas de la tabla.
 
 ```
 LIMIT 5,20 
 ```
 
-Ense±a las 15 filas despuΘs de saltar las 5 primeras. 
-Serφa como decirle: "Saca las 20 primeras filas, pero no ense±es las 5 primeras".
+Enseña las 15 filas después de saltar las 5 primeras. 
+Sería como decirle: "Saca las 20 primeras filas, pero no enseñes las 5 primeras".
 
 ```
 WHERE name IN ('Brazil', 'Russia', 'India', 'China');
@@ -44,56 +44,56 @@ ORDER BY population desc
 ```
 
 Ordena la salida por orden **desc**endiente o **asc**endiente.
-Poner mßs de un ORDER BY sirve para ordenar los que estßn la misma posici≤n. (Ordenar por clase, ordenar por nombre. Quedarφan los alumnos ordenados alfabeticamente por clase).
+Poner más de un ORDER BY sirve para ordenar los que están la misma posición. (Ordenar por clase, ordenar por nombre. Quedarían los alumnos ordenados alfabeticamente por clase).
 
 ```
 WHERE area BETWEEN 200 AND 300
 ```
 
-Entre el primer n·mero y el segundo. Incluye los dos valorese en los extremos (200 y 300).
+Entre el primer número y el segundo. Incluye los dos valores en los extremos (200 y 300).
 
 ```
 WHERE name BETWEEN 'A' AND 'B'
 ```
 > ('D' >= pais >='F')
 
-Solo busca la primera letra porque busca hasta "B". Si hay un pais llamado "B" lo pondrφa. (Nombres que empiezan por "A", no por "B").
+Solo busca la primera letra porque busca hasta "B". Si hay un pais llamado "B" lo pondría. (Nombres que empiezan por "A", no por "B").
 
 ```
 FROM world AS mundo
 ```
 
-Renombrar la tabla world por mundo en el c≤digo, permitiendo usar un alias de la tabla por comodidad.
+Renombrar la tabla world por mundo en el código, permitiendo usar un alias de la tabla por comodidad.
 
 > (SELECT mundo.name)
 
-Serφa como se usa el alias.
+Sería como se usa el alias.
 
 ```
 WHERE name LIKE '%7'
 ```
 
-Usando `%` con `LIKE` permite buscar partes solamente. En este ejemplo buscarφa nombres que acaben con un 7.
-`%` es que acepta cualquier n·mero de caracteres.
+Usando `%` con `LIKE` permite buscar partes solamente. En este ejemplo buscaría nombres que acaben con un 7.
+`%` es que acepta cualquier número de caracteres.
 
 ```
 AND name LIKE '8%'
 ```
 
-Continuando la anterior, esto buscarφa que termine en 7 y que empiece por 8. (Aunque hay mejores maneras de hacer esto, como `LIKE '8%7'`).
+Continuando la anterior, esto buscaría que termine en 7 y que empiece por 8. (Aunque hay mejores maneras de hacer esto, como `LIKE '8%7'`).
 
 ```
 WHERE LOWER(first_name) LIKE 'an%'
 ```
 
-Poner LOWER hace que el texto en `first_name` sea transformado en min·sculas (A menos que ya estea en min·sculas).
+Poner LOWER hace que el texto en `first_name` sea transformado en minúsculas (A menos que ya estea en minúsculas).
 
 
-> % 
-Cualquier carßcter y n·mero de caracteres, incluso ninguno.
+` % `
+Cualquier carácter y número de caracteres, incluso ninguno.
 
-> _
-Un carßcter cualquiera, pero obligatorio uno.
+` _ `
+Un carácter cualquiera, pero obligatorio uno.
 
 ```
 WHERE CONCAT(name, ' City') LIKE capital
@@ -105,13 +105,13 @@ WHERE CONCAT(name, ' City') LIKE capital
 SELECT name, REPLACE(capital, name, '') AS ext
 ```
 
-REPLACE: En  A, cambiar B por C. En el ejemplo, coje `name` y lo cambia por nada en `capital`. Mexico y Mexico City quedarφa en " City".
+REPLACE: En  A, cambiar B por C. En el ejemplo, coje `name` y lo cambia por nada en `capital`. Mexico y Mexico City quedaría en " City".
 
 ```
 SELECT DISTINCT continent
 ```
 
-DISTINCT: Selecciona solo los continentes diferentes, para no seleccionarlos mßs de una vez. Si un SELECT sacarφa la misma cosa 5 veces, DISTINCT hace que salga una vez solo.
+DISTINCT: Selecciona solo los continentes diferentes, para no seleccionarlos mßs de una vez. Si un SELECT sacaría la misma cosa 5 veces, DISTINCT hace que salga una vez solo.
 
 ```
 WHERE continent = "South America"
@@ -159,7 +159,7 @@ ROUND(population/1000000,2),
 ROUND(gdp/1000000000,2)
 ```
 
-ROUND: Cosa a redondear/n·mero para dividir, número de decimales
+ROUND: Cosa a redondear/número para dividir, número de decimales
 
 LENGTH: Cuenta caracteres y lo pone como número.
 
@@ -178,7 +178,7 @@ WHERE name LIKE 'United Kingdom');
 Se puede poner SELECT dentro de WHERE.
 
 
-Una variable serφa:
+Una variable sería:
 
 ```
 var GermanyPopulation = SELECT population
@@ -271,9 +271,12 @@ ON game.id = goal.matchid
 WHERE player LIKE 'Mario%'
 ```
 
-Los SELECT necesitan tener antes de que tabla son
-El JOIN se pone en FROM
+Los SELECT no necesitan siempre tener antes de que tabla son, pero ayuda mucho.
+
+El JOIN se pone en FROM.
+
 "ON" se usa para indicar que filas en la 1 van con las filas de la 2, tienen que ser iguales ambos.
+
 Se puede usar "AS" en FROM y JOIN para facilitar la escritura (Ga.id en vez de game.id)
 
 ```
@@ -328,20 +331,17 @@ WHERE A2.name = 'Art Garfunkle'
 ```
 	  
 	  
-Externo - conceptual - Interno
+Externo - Conceptual - Interno
 
-BACHMAN - Entidad relación. (conceptual)
+BACHMAN - Entidad relación. (Conceptual).
 
-Entidad relación extendido tiene relaciones débiles
+Entidad relación extendido tiene relaciones débiles.
 
-1 Forma normal: No valores multivalorados.
-2 Forma normal: Dependecia completa de la clave
-3 Forma normal: No dependencias transitivas
+1ª Forma normal: No valores multivalorados.
+2ª Forma normal: Dependecia completa de la clave
+3ª Forma normal: No dependencias transitivas
 
-Independecia l≤gica, que los usuarios no tengan que sufrir las caidas por cambios?
-
-Independecia fφsica, que instalar nuevo OS no afecte al viejo???
-
+Independecia lógica es cuando los usuarios no tengan que sufrir las caidas por cambios.
 
 ```
 SELECT teacher.name
@@ -349,7 +349,7 @@ FROM teacher
 WHERE teacher.dept IS NULL;
 ```
 
-Obetener los departamentos null.
+Obetener los departamentos NULL.
 
 ```
 SELECT teacher.name
@@ -358,8 +358,7 @@ WHERE teacher.name =    'S%' -- 'S%' CADENA             - TIENE QUE SER S%
   OR  teacher.name LIKE 'S%' -- 'S%' EXPRESION REGULAR  - TIENE QUE EMPEZAR POR S
 ```
 
-INNER JOIN ES IGUAL A JOIN
-
+INNER JOIN es igual a JOIN
 
 LEFT JOIN es: "Sácame los de la izquierda, aunque sean nulos."
 
@@ -379,7 +378,7 @@ SELECT teacher.name, dept.name
 FROM teacher RIGHT JOIN dept ON (teacher.dept=dept.id)
 ```
 
-Se puede hacer con un left join si se cambia "teacher.dept=dept.id" y se pone al revΘs.
+Se puede hacer con un left join si se cambia `teacher.dept=dept.id` y se pone al revés.
 
 ```
 SELECT teacher.name, COALESCE(teacher.mobile, '07986 444 2266')
@@ -395,7 +394,7 @@ COUNT(teacher.mobile)
 FROM teacher;
 ```
 
-COUNT: Contar filas ( Es un reductor).
+COUNT: Contar filas (Es un reductor).
 
 ```
 SELECT stops.id, stops.name
@@ -420,22 +419,22 @@ WHERE actor.name IN (
 	WHERE Actor.name = 'Art Garfunkel');
 ```
 
-Recordar: SQL es una lenguaje declarativa
+SQL es una lenguaje declarativa
 
-Sub-Lenguajes de SQL 
+## Sub-Lenguajes de SQL 
 
-DDL Data Definition Language     - Importante
-	CREATE, ALTER, DROP
-DML Data Manipulation Language   - Importante
-	INSERT, UPDATE, DELETE
-DCL Data Control Language
-	GRANT, REVOKE, AUDIT, COMMENT
-TCL Transaction Control Language
-	COMMIT, ROLLBACK SAVEPOINT
-DQL Data Query Language          - Importante
-	SELECT
-SCL Session Control Language
-	ALTER SESSION, SET ROLL
+> DDL Data Definition Language - Importante
+>	CREATE, ALTER, DROP
+> DML Data Manipulation Language   - Importante
+>	INSERT, UPDATE, DELETE
+> DCL Data Control Language
+>	GRANT, REVOKE, AUDIT, COMMENT
+> TCL Transaction Control Language
+>	COMMIT, ROLLBACK SAVEPOINT
+> DQL Data Query Language  - Importante
+>	SELECT
+> SCL Session Control Language
+>	ALTER SESSION, SET ROLL
 
 	
 Añadir `(link)?answer=1` al final de la url de SQLZoo permite ver las respuestas.
