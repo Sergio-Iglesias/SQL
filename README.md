@@ -423,27 +423,27 @@ SQL es una lenguaje declarativa
 
 ## Sub-Lenguajes de SQL 
 
-> DDL Data Definition Language - Importante
+ DDL Data Definition Language - Importante
 
 >	CREATE, ALTER, DROP
 
-> DML Data Manipulation Language   - Importante
+ DML Data Manipulation Language   - Importante
 
 >	INSERT, UPDATE, DELETE
 
-> DCL Data Control Language
+ DCL Data Control Language
 
 >	GRANT, REVOKE, AUDIT, COMMENT
 
-> TCL Transaction Control Language
+ TCL Transaction Control Language
 
 >	COMMIT, ROLLBACK SAVEPOINT
 
-> DQL Data Query Language  - Importante
+ DQL Data Query Language  - Importante
 
 >	SELECT
 
-> SCL Session Control Language
+ SCL Session Control Language
 
 >	ALTER SESSION, SET ROLL
 
