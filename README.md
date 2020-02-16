@@ -1,7 +1,6 @@
-En estos apuntes hay muchos ejemplos de código, ya que me ayuda ver código ya hecho para entender como funciona.
+##  En estos apuntes hay muchos ejemplos de código, ya que me ayuda ver código ya hecho para entender como funciona.
 
-
-### Ejemplo de SQL normal
+Ejemplo de SQL normal:
 
 ```
 SELECT name, population
