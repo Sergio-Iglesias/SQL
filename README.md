@@ -9,7 +9,7 @@ WHERE name >= 'Germany';
 ORDER BY population desc
 ```
 
-Para mayor o menor, hay que usar primero "<=", no permite hacer "=<". Igualmente, tiene que ser ">=" y no "=>". El igual al final siempre.
+Para mayor o menor, hay que usar primero `<=`, no permite hacer `=<`. Igualmente, tiene que ser `>=` y no `=>`. El igual al final siempre.
 
 Siempre hay que añadir punto y coma al final.
 
